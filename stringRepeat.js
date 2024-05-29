@@ -6,6 +6,16 @@
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 
 
-function repeatStr (n, s) {
-    return s.repeat(n);
+function expandedForm(num) {
+    let array = []
+    let step = num.toString().length - 1;
+  while (step >= 0) {
+       if (num / 10 ** step >= 1) {
+       array.push(Math.floor(num / 10 ** step) + "0".repeat(step));
+       array.push(" + ");
+       }
+       num %= 10 ** step;   
+       step --;
+       }
+    return array.slice(0, -1).join("")
   }
