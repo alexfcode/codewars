@@ -5,15 +5,13 @@
 // ✅Solution:
 var countSheep = function (num){
     let str = ""
-    if (num == "") {return ""} else {
     for (i = 1; i <= num; i++) {
       str += (i + " sheep...");
-    }
-    }
+      }
     return str;
   }
 
-  console.log("countSheep: ", countSheep(5));
+  console.log("countSheep: ", countSheep(0));
 
 
 
